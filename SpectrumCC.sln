@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpectrumCC", "SpectrumCC\SpectrumCC.csproj", "{5F372068-C70A-447F-9655-5A6BEAA9A272}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpectrumCC.Droid", "Droid\SpectrumCC.Droid.csproj", "{49A46B13-5F75-438C-95AD-E47FF5D2CD94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F372068-C70A-447F-9655-5A6BEAA9A272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F372068-C70A-447F-9655-5A6BEAA9A272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F372068-C70A-447F-9655-5A6BEAA9A272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F372068-C70A-447F-9655-5A6BEAA9A272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A46B13-5F75-438C-95AD-E47FF5D2CD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A46B13-5F75-438C-95AD-E47FF5D2CD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A46B13-5F75-438C-95AD-E47FF5D2CD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A46B13-5F75-438C-95AD-E47FF5D2CD94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

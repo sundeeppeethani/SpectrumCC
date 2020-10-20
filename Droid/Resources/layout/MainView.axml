@@ -1,0 +1,52 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType= "text" 
+            android:singleLine="true"
+            android:backgroundTint="@null"
+            android:imeOptions="actionNext"
+            android:hint="@string/userName" 
+            local:MvxBind="Text UserName"/>
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType="textPassword" 
+            android:singleLine="true"
+            android:backgroundTint="@null"
+            android:imeOptions="actionDone"
+            android:hint="@string/password"
+            local:MvxBind="Text Password"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:text="@string/login"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:textColor="#2E8B57"
+        android:textSize="16sp"
+        local:MvxBind="Click LoginCommand"/>
+
+      <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnNewUser"
+        android:text="@string/newUser"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:textColor="#2E8B57"
+        android:textSize="16sp"
+        local:MvxBind="Click NewUserCommand"/>
+</LinearLayout>

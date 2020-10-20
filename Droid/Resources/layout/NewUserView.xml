@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="40dp"
+    android:layout_height="match_parent">
+ <EditText
+            android:id="@+id/edtFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType= "text" 
+            android:singleLine="true"
+            android:backgroundTint="@null"
+            android:imeOptions="actionNext"
+            android:hint="@string/firstName" 
+            local:MvxBind="Text FirstName"/>
+     <EditText
+            android:id="@+id/edtLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType= "text" 
+            android:singleLine="true"
+            android:backgroundTint="@null"
+            android:imeOptions="actionNext"
+            android:hint="@string/lastName" 
+            local:MvxBind="Text LastName"/>
+     <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType= "text" 
+            android:singleLine="true"
+            android:backgroundTint="@null"
+            android:imeOptions="actionNext"
+            android:hint="@string/userName" 
+            local:MvxBind="Text UserName"/>
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType="textPassword" 
+            android:singleLine="true"
+            android:backgroundTint="@null"
+            android:imeOptions="actionNext"
+            android:hint="@string/password"
+            local:MvxBind="Text Password"/>
+     <EditText
+            android:id="@+id/edtPhnNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType= "phone" 
+            android:singleLine="true"
+            android:backgroundTint="@null"
+            android:imeOptions="actionNext"
+            android:hint="@string/phoneNumber" 
+            local:MvxBind="Text PhoneNumber"/>
+     <EditText
+            android:id="@+id/edtServiceStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType= "date" 
+            android:singleLine="true"
+            android:backgroundTint="@null"
+            android:layout_marginTop="20dp"
+            android:imeOptions="actionDone"
+            android:hint="@string/serviceStartDate" 
+            local:MvxBind="Text ServiceStartDate"/>
+      <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCreateAccount"
+            android:text="@string/createAccount"
+            android:textStyle="bold"
+            android:layout_margin="40dp"
+            android:textColor="#2E8B57"
+            android:textSize="16sp"
+            local:MvxBind="Click CreateAccountCommand"/>
+</LinearLayout>
