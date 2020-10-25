@@ -17,9 +17,9 @@ namespace SpectrumCC
             _connection.CreateTable<User>();
         }
 
-        public void AddUser(User contact)
+        public void AddUser(User user)
         {
-            _connection.Insert(contact);
+            _connection.Insert(user);
         }
 
         public User GetUser(int id)
@@ -30,6 +30,12 @@ namespace SpectrumCC
         public IEnumerable<User> GetUsers()
         {
             return  _connection.Table<User>().ToList();
+        }
+
+        public bool IsUserExist(string userName, string password)
+        {
+            var isUserExists = _connection.Table<User>().Any(x => x.UserName == userName && x.Password == password);
+            return isUserExists;
         }
     }
 }

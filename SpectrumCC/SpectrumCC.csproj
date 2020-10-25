@@ -37,6 +37,7 @@
     <Compile Include="Interfaces\ISQLiteDb.cs" />
     <Compile Include="SQLiteUserStore.cs" />
     <Compile Include="Helpers\RegexHelper.cs" />
+    <Compile Include="ViewModels\AccountSuccessfullyCreatedViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

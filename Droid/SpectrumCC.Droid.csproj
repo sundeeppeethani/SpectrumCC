@@ -87,6 +87,7 @@
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Views\NewUserView.cs" />
     <Compile Include="SQLiteDb.cs" />
+    <Compile Include="Views\AccountSuccessfullyCreatedView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -120,6 +121,14 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\NewUserView.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AccountSuccessfullyCreatedView.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\success.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

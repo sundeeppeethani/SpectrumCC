@@ -2,18 +2,21 @@
 using System.Threading.Tasks;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
+using SpectrumCC.Interfaces;
+using SpectrumCC.Users;
 
 namespace SpectrumCC.ViewModels
 {
     public class NewUserViewModel: MvxViewModel
     {
         private readonly IMvxNavigationService _navigationService;
+        private readonly ISQLiteDb _sqliteDb;
 
-        public NewUserViewModel(IMvxNavigationService navigationService)
+        public NewUserViewModel(IMvxNavigationService navigationService, ISQLiteDb sqliteDb)
         {
             _navigationService = navigationService;
+            _sqliteDb = sqliteDb;
         }
-
 
         public override Task Initialize()
         {
@@ -25,7 +28,21 @@ namespace SpectrumCC.ViewModels
         public IMvxCommand CreateAccountCommand => new MvxCommand(CreateAccount);
         private void CreateAccount()
         {
+            using (var connection = _sqliteDb.GetConnection())
+            {
+                connection.CreateTable<User>();
+                User user = new User {
+                    FirstName = FirstName,
+                    LastName= LastName,
+                    UserName = UserName,
+                    Password = Password,
+                    PhoneNumber = PhoneNumber,
+                    ServiceStartDate = ServiceStartDate,
+                };
+                connection.Insert(user);
+            }
 
+            _navigationService.Navigate<AccountSuccessfullyCreatedViewModel>();
         }
 
         private string _firstName = "";

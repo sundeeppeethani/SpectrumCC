@@ -20,6 +20,6 @@ namespace SpectrumCC.Users
         [MaxLength(255)]
         public string PhoneNumber { get; set; }
         [MaxLength(255)]
-        public DateTime ServiceStartDate { get; set; }
+        public string ServiceStartDate { get; set; }
     }
 }

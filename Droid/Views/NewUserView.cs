@@ -15,7 +15,7 @@ using SpectrumCC.ViewModels;
 
 namespace SpectrumCC.Droid.Views
 {
-    [Activity(Label = "Activity")]
+    [Activity(Label = "NewUserView")]
     public class NewUserView :  MvxActivity<NewUserViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)

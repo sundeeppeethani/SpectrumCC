@@ -13,4 +13,7 @@
     <string name="serviceStartDate">Service Start Date</string>
     <string name="createAccount">Create Account</string>
     <string name="string_password">Password</string>
+    <string name="success">Success\!</string>
+    <string name="successfullyCreated">Account Successfully Created</string>
+    <string name="loginNow">Login Now\?</string>
 </resources>

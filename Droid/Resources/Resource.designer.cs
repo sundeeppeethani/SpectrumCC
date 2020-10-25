@@ -90,6 +90,9 @@ namespace SpectrumCC.Droid
 			// aapt resource value: 0x7F020000
 			public const int splash = 2130837504;
 			
+			// aapt resource value: 0x7F020001
+			public const int success = 2130837505;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -130,14 +133,20 @@ namespace SpectrumCC.Droid
 			// aapt resource value: 0x7F03000A
 			public const int edtUserName = 2130903050;
 			
+			// aapt resource value: 0x7F03000B
+			public const int imageView1 = 2130903051;
+			
 			// aapt resource value: 0x7F030000
 			public const int MvvmCrossTagId = 2130903040;
 			
 			// aapt resource value: 0x7F030001
 			public const int MvxBindingTagUnique = 2130903041;
 			
-			// aapt resource value: 0x7F03000B
-			public const int myButton = 2130903051;
+			// aapt resource value: 0x7F03000C
+			public const int myButton = 2130903052;
+			
+			// aapt resource value: 0x7F03000D
+			public const int textView1 = 2130903053;
 			
 			static Id()
 			{
@@ -153,16 +162,19 @@ namespace SpectrumCC.Droid
 		{
 			
 			// aapt resource value: 0x7F040000
-			public const int Main = 2130968576;
+			public const int AccountSuccessfullyCreatedView = 2130968576;
 			
 			// aapt resource value: 0x7F040001
-			public const int MainView = 2130968577;
+			public const int Main = 2130968577;
 			
 			// aapt resource value: 0x7F040002
-			public const int NewUserView = 2130968578;
+			public const int MainView = 2130968578;
 			
 			// aapt resource value: 0x7F040003
-			public const int SplashScreen = 2130968579;
+			public const int NewUserView = 2130968579;
+			
+			// aapt resource value: 0x7F040004
+			public const int SplashScreen = 2130968580;
 			
 			static Layout()
 			{
@@ -221,22 +233,31 @@ namespace SpectrumCC.Droid
 			public const int login = 2131099656;
 			
 			// aapt resource value: 0x7F060009
-			public const int newUser = 2131099657;
+			public const int loginNow = 2131099657;
 			
 			// aapt resource value: 0x7F06000A
-			public const int password = 2131099658;
+			public const int newUser = 2131099658;
 			
 			// aapt resource value: 0x7F06000B
-			public const int phoneNumber = 2131099659;
+			public const int password = 2131099659;
 			
 			// aapt resource value: 0x7F06000C
-			public const int serviceStartDate = 2131099660;
+			public const int phoneNumber = 2131099660;
 			
 			// aapt resource value: 0x7F06000D
-			public const int string_password = 2131099661;
+			public const int serviceStartDate = 2131099661;
 			
 			// aapt resource value: 0x7F06000E
-			public const int userName = 2131099662;
+			public const int string_password = 2131099662;
+			
+			// aapt resource value: 0x7F06000F
+			public const int success = 2131099663;
+			
+			// aapt resource value: 0x7F060010
+			public const int successfullyCreated = 2131099664;
+			
+			// aapt resource value: 0x7F060011
+			public const int userName = 2131099665;
 			
 			static String()
 			{

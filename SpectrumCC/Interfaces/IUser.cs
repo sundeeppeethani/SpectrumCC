@@ -9,6 +9,7 @@ namespace SpectrumCC.Interfaces
     {
         IEnumerable<User> GetUsers();
         User GetUser(int id);
-        void AddUser(User contact);
+        void AddUser(User user);
+        bool IsUserExist(string userName, string password);
     }
 }

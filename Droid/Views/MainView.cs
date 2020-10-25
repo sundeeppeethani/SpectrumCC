@@ -4,7 +4,7 @@ using MvvmCross.Droid.Views;
 
 namespace SpectrumCC.Droid.Views
 {
-    [Activity(Label = "View for MainViewModel")]
+    [Activity(Label = "MainViewModel")]
     public class MainView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
