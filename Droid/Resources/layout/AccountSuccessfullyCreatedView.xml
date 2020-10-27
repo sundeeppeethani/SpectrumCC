@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<TextView
+		android:text="@string/success"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:textStyle="bold"
+		android:layout_margin="20dp"
+		android:gravity="center" />
+	<ImageView
+		android:src="@drawable/success"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_margin="20dp"
+		android:id="@+id/imageView1" />
+	<TextView
+		android:text="@string/successfullyCreated"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_marginTop="5dp"
+		android:id="@+id/textView1" />
+	<Button
+		android:text="@string/loginNow"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_margin="20dp"
+		android:textColor="#2E8B57"
+		local:MvxBind="Click LoginNowCommand"/>
+
+</LinearLayout>
