@@ -1,6 +1,8 @@
 using Android.App;
 using Android.OS;
 using MvvmCross.Droid.Views;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Droid.Platform;
 
 namespace SpectrumCC.Droid.Views
 {

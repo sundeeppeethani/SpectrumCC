@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
+using SpectrumCC.Helpers;
 using SpectrumCC.Interfaces;
 using SpectrumCC.Users;
 
@@ -11,11 +12,13 @@ namespace SpectrumCC.ViewModels
     {
         private readonly IMvxNavigationService _navigationService;
         private readonly ISQLiteDb _sqliteDb;
+        private readonly IDialogService _dialogService;
 
-        public NewUserViewModel(IMvxNavigationService navigationService, ISQLiteDb sqliteDb)
+        public NewUserViewModel(IMvxNavigationService navigationService, ISQLiteDb sqliteDb, IDialogService dialogService)
         {
             _navigationService = navigationService;
             _sqliteDb = sqliteDb;
+            _dialogService = dialogService;
         }
 
         public override Task Initialize()
@@ -28,21 +31,45 @@ namespace SpectrumCC.ViewModels
         public IMvxCommand CreateAccountCommand => new MvxCommand(CreateAccount);
         private void CreateAccount()
         {
-            using (var connection = _sqliteDb.GetConnection())
+            if (RegexHelper.HasSpecialCharactersInString(FirstName))
             {
-                connection.CreateTable<User>();
-                User user = new User {
-                    FirstName = FirstName,
-                    LastName= LastName,
-                    UserName = UserName,
-                    Password = Password,
-                    PhoneNumber = PhoneNumber,
-                    ServiceStartDate = ServiceStartDate,
-                };
-                connection.Insert(user);
+                _dialogService.ShowDialog("Error", "First Name must not have these special characters:!@#$%^&", "OK");
             }
+            else if(RegexHelper.HasSpecialCharactersInString(LastName))
+            {
+                _dialogService.ShowDialog("Error", "Last Name must not have these special characters:!@#$%^&", "OK");
+            }
+            else if (!RegexHelper.IsBetweenCharacterLength(Password, 8, 15))
+            {
+                _dialogService.ShowDialog("Error", "Password must have from 8 to 15 characters", "OK");
+            }
+            else if (!RegexHelper.IsMixtureOfLetterAndDigits(Password))
+            {
+                _dialogService.ShowDialog("Error", "Password must have at least one lowercase letter, one uppercase letter", "OK");
+            }
+            else if (RegexHelper.HasContainsAnySequence(Password))
+            {
+                _dialogService.ShowDialog("Error", "Password must not have repetitive any sequence of characters ", "OK");
+            }
+            else
+            {
+                using (var connection = _sqliteDb.GetConnection())
+                {
+                    connection.CreateTable<User>();
+                    User user = new User
+                    {
+                        FirstName = FirstName,
+                        LastName = LastName,
+                        UserName = UserName,
+                        Password = Password,
+                        PhoneNumber = PhoneNumber,
+                        ServiceStartDate = ServiceStartDate,
+                    };
+                    connection.Insert(user);
+                }
 
-            _navigationService.Navigate<AccountSuccessfullyCreatedViewModel>();
+                _navigationService.Navigate<AccountSuccessfullyCreatedViewModel>();
+            }
         }
 
         private string _firstName = "";

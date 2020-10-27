@@ -12,11 +12,13 @@ namespace SpectrumCC.ViewModels
 
         private readonly IMvxNavigationService _navigationService;
         private readonly ISQLiteDb _sqliteDb;
+        private readonly IDialogService _dialogService;
 
-        public MainViewModel(IMvxNavigationService navigationService, ISQLiteDb sqliteDb)
+        public MainViewModel(IMvxNavigationService navigationService, ISQLiteDb sqliteDb, IDialogService dialogService)
         {
             _navigationService = navigationService;
             _sqliteDb = sqliteDb;
+            _dialogService = dialogService;
         }
         
         
@@ -30,23 +32,40 @@ namespace SpectrumCC.ViewModels
         public IMvxCommand LoginCommand => new MvxCommand(Login);
         private void Login()
         {
-            using (var connection = _sqliteDb.GetConnection())
+            if (!string.IsNullOrEmpty(UserName))
             {
-                var info = connection.GetTableInfo("User");
-                if (info.Any())
+                using (var connection = _sqliteDb.GetConnection())
                 {
-                    var isUserExists = connection.Table<User>().Any(x => x.UserName == UserName && x.Password == Password);
-                    if (isUserExists)
+                    var info = connection.GetTableInfo("User");
+                    if (info.Any())
                     {
-                        
+                        var user = connection.Table<User>().
+                                            Where(x => x.UserName.ToLower() == UserName.ToLower())
+                                            .FirstOrDefault();
+                        if (user == null)
+                        {
+                            _dialogService.ShowDialog("Error", "Account doesn’t exist", "OK");
+                        }
+                        else if (user.Password != Password)
+                        {
+                            _dialogService.ShowDialog("Error", "Password is incorrect", "OK");
+                        }
+                        else
+                        {
+                            _dialogService.ShowDialog("Success!", "User logged in", "OK");
+                        }
                     }
                     else
                     {
-
+                        _dialogService.ShowDialog("Error", "No users exist", "OK");
                     }
                 }
-
             }
+            else
+            {
+                _dialogService.ShowDialog("Warning", "User Name is empty", "OK");
+            }
+            
         }
 
         public IMvxCommand NewUserCommand => new MvxCommand(NewUser);

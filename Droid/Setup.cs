@@ -26,6 +26,8 @@ namespace SpectrumCC.Droid
         protected override void InitializeFirstChance()
         {
             Mvx.LazyConstructAndRegisterSingleton<ISQLiteDb, SQLiteDb>();
+            Mvx.LazyConstructAndRegisterSingleton<IDialogService,DialogService>();
+            //Mvx.RegisterSingleton<IDialogService>(() => new DialogService());
         }
     }
 }

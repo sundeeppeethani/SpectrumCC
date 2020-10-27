@@ -46,6 +46,7 @@ namespace SpectrumCC.Droid
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::SpectrumCC.Droid.Resource.Styleable.MvxListView;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::SpectrumCC.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::SpectrumCC.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::Splat.Resource.String.library_name = global::SpectrumCC.Droid.Resource.String.library_name;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::SpectrumCC.Droid.Resource.String.ApplicationName;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::SpectrumCC.Droid.Resource.String.Hello;
 		}
@@ -230,34 +231,37 @@ namespace SpectrumCC.Droid
 			public const int lastName = 2131099655;
 			
 			// aapt resource value: 0x7F060008
-			public const int login = 2131099656;
+			public const int library_name = 2131099656;
 			
 			// aapt resource value: 0x7F060009
-			public const int loginNow = 2131099657;
+			public const int login = 2131099657;
 			
 			// aapt resource value: 0x7F06000A
-			public const int newUser = 2131099658;
+			public const int loginNow = 2131099658;
 			
 			// aapt resource value: 0x7F06000B
-			public const int password = 2131099659;
+			public const int newUser = 2131099659;
 			
 			// aapt resource value: 0x7F06000C
-			public const int phoneNumber = 2131099660;
+			public const int password = 2131099660;
 			
 			// aapt resource value: 0x7F06000D
-			public const int serviceStartDate = 2131099661;
+			public const int phoneNumber = 2131099661;
 			
 			// aapt resource value: 0x7F06000E
-			public const int string_password = 2131099662;
+			public const int serviceStartDate = 2131099662;
 			
 			// aapt resource value: 0x7F06000F
-			public const int success = 2131099663;
+			public const int string_password = 2131099663;
 			
 			// aapt resource value: 0x7F060010
-			public const int successfullyCreated = 2131099664;
+			public const int success = 2131099664;
 			
 			// aapt resource value: 0x7F060011
-			public const int userName = 2131099665;
+			public const int successfullyCreated = 2131099665;
+			
+			// aapt resource value: 0x7F060012
+			public const int userName = 2131099666;
 			
 			static String()
 			{

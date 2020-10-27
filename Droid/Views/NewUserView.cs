@@ -8,6 +8,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Telephony;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Droid.Views;
@@ -22,7 +23,9 @@ namespace SpectrumCC.Droid.Views
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.NewUserView);
-            // Create your application here
+
+            var edtPhoneNumber = FindViewById<EditText>(Resource.Id.edtPhnNum);
+            edtPhoneNumber.AddTextChangedListener(new PhoneNumberFormattingTextWatcher());
         }
     }
 }
