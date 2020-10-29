@@ -12,7 +12,7 @@ namespace SpectrumCC.Droid
         {
             var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var path = Path.Combine(documentsPath, "spectrum.db3");
-            var platform = new SQLitePlatformAndroid();
+            var platform = new SQLitePlatformAndroidN();
             return new SQLiteConnection(platform, path);
         }
     }

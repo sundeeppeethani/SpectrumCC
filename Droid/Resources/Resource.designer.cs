@@ -49,6 +49,8 @@ namespace SpectrumCC.Droid
 			global::Splat.Resource.String.library_name = global::SpectrumCC.Droid.Resource.String.library_name;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::SpectrumCC.Droid.Resource.String.ApplicationName;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::SpectrumCC.Droid.Resource.String.Hello;
+			global::SQLite.Net.Platform.XamarinAndroidN.Resource.String.ApplicationName = global::SpectrumCC.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroidN.Resource.String.Hello = global::SpectrumCC.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

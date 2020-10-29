@@ -111,6 +111,10 @@
     <Reference Include="Xamarin.Android.Support.Design">
       <HintPath>..\packages\Xamarin.Android.Support.Design.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinAndroidN">
+      <HintPath>..\packages\SQLite.Net.Platform.XamarinAndroidN.3.1.1\lib\SQLite.Net.Platform.XamarinAndroidN.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpectrumCC\SpectrumCC.csproj">
